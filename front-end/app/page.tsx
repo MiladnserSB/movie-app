@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { MovieCard } from "./components/MovieCard";
 
 const HomePage = () => {
   return (
-    <div>Home Page</div>
-  )
-}
+    <>
+      <MovieCard />
+      <div>Home Page</div>
+    </>
+  );
+};
 
 export default HomePage;

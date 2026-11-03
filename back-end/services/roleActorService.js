@@ -1,7 +1,10 @@
 import RoleActor from "../models/roleActorModel.js";
 
 export const getCastByMovie = (movieId) =>
-  RoleActor.find({ movieId }).populate("actorId", "actorName");
+  RoleActor.find({ movieId }).populate(
+    "actorId",
+    "actorName",
+  );
 
 export const getFilmographyByActor = (actorId) =>
   RoleActor.find({ actorId }).populate(
