@@ -1,0 +1,78 @@
+# ==============================================================================
+# 1. Front-End (Next.js / Node.js)
+# ==============================================================================
+
+# Dependencies
+front-end/node_modules/
+front-end/.pnpm-store/
+
+# Next.js build and production output
+front-end/.next/
+front-end/out/
+
+# Build outputs
+front-end/build/
+front-end/dist/
+
+# Debug logs
+front-end/npm-debug.log*
+front-end/yarn-debug.log*
+front-end/yarn-error.log*
+front-end/pnpm-debug.log*
+
+# Local environment variables
+front-end/.env
+front-end/.env.local
+front-end/.env.development.local
+front-end/.env.test.local
+front-end/.env.production.local
+
+# Testing
+front-end/coverage/
+front-end/.nyc_output
+
+# IDEs and editors configuration
+front-end/.vscode/
+front-end/.idea/
+
+# ==============================================================================
+# 2. Back-End (Node.js / Express)
+# ==============================================================================
+
+# Dependencies
+back-end/node_modules/
+
+# Debug and runtime logs
+back-end/logs/
+back-end/*.log
+back-end/npm-debug.log*
+
+# Environment variables (Crucial for MongoDB/Secrets)
+back-end/.env
+back-end/.env.local
+back-end/.env.production
+
+# Build outputs (if any compiled files are used)
+back-end/dist/
+
+# IDEs and editors configuration
+back-end/.vscode/
+back-end/.idea/
+
+# ==============================================================================
+# 3. Global / System Files
+# ==============================================================================
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backup and temporary files
+*.bak
+*.swp
+*.tmp
+*~
