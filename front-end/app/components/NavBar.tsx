@@ -3,31 +3,30 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NavBar = () => {
+export const NavBar = () => {
   const pathname = usePathname();
 
   const links = [
     { href: "/movies", label: "Movies" },
     { href: "/actors", label: "Actors" },
+    { href: "/admin/movies", label: "Manage Movies" },
+    { href: "/admin/actors", label: "Manage Actors" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between h-16 px-6 bg-gray-900 text-white shadow-md">
-      {/* Logo */}
+      {/* الشعار */}
       <Link
-        href="/"
+        href="/movies"
         className="text-xl font-bold text-yellow-400 tracking-wide"
       >
         🎬 MovieApp
       </Link>
 
-      {/* Links */}
+      {/* روابط الصفحات الأربع */}
       <ul className="flex items-center gap-2 list-none m-0 p-0">
         {links.map(({ href, label }) => {
-          const isActive =
-            href === "/movies"
-              ? pathname === "/movies" || pathname.startsWith("/movies/")
-              : pathname === href || pathname.startsWith(href + "/");
+          const isActive = pathname === href || pathname.startsWith(href + "/");
 
           return (
             <li key={href}>
